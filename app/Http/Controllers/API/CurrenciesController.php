@@ -20,7 +20,7 @@ class CurrenciesController extends Controller
     public function index()
     {
         $data = Currency::latest()->get();
-        return response()->json([CurrenciesResource::collection($data), 'Programs fetched.']);
+        return response()->json([CurrenciesResource::collection($data), 'Currency fetched.']);
     }
 
     /**

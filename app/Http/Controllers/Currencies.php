@@ -15,9 +15,6 @@ class Currencies extends Controller
     public function index()
     {
         $data = Currency::get();
-        //print_r($data);
-        //return view("exchangerate");
-        //return response()->json([CurrenciesResource::collection($data), 'Programs fetched.']);
         $data = $this->make_ui($data);
         return $data;
     }
